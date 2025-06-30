@@ -3,6 +3,18 @@
 This demo shows how to create zkTLS data attestations (proofs) about your 30-day PNL rate in Binance. I use the conditional compare in the proof generation, check [here] (https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test#verification-logics) for the syntax.
 
 
+# How to Run the Demo?
+git clone the repo into your local folder, then:
+
+```node
+cd proof-of-cex
+
+npm run dev
+```
+and copy the local server URL in your browser and play. 
+
+Remember to install the Primus [extension](https://chromewebstore.google.com/detail/primus/oeiomhmbaapihbilkfkhmlajkeegnjhe) before the test.
+
 # Installation
 
 We use vite and React as the frameworks to create a dapp project. 
