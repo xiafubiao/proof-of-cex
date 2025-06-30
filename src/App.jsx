@@ -50,18 +50,27 @@ function App() {
       //  ],
       // ]);
       // 2. Conditions result.\
-      
+      /*
        const attConditions = JSON.stringify([
         [
           {
-            field: "spotPnlRate",
-            op: ">=",
-            value: "0.1",  // PNL Rate >= 10% (=0.1): trader,  else: loser
+            field: "$.data.cumulativeCurrMonth.spotPnlRate",
+            op: ">",
+            value: "1",  // PNL Rate >= 10% (=0.1): trader,  else: loser
           },
         ],
        ]);
        request.setAttConditions(attConditions);
-      
+      */
+       request.setAttConditions([
+        [
+          {
+            field: "spotPnlRate",
+            op: ">",
+            value: "0.1",  // PNL Rate >= 10% (=0.1): trader,  else: loser
+          },
+         ],
+       ]);
 
       // Transfer request object to string.
       const requestStr = request.toJsonString();
