@@ -15,7 +15,7 @@ and copy the local server URL in your browser and play.
 
 Remember to install the Primus [extension](https://chromewebstore.google.com/detail/primus/oeiomhmbaapihbilkfkhmlajkeegnjhe) before the test.
 
-# Installation
+# How to Create Your Own zkTLS DAPP?
 
 We use vite and React as the frameworks to create a dapp project. 
 ```node
