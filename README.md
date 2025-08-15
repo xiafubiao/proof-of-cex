@@ -1,6 +1,6 @@
 # A Quick Demo for Primus zkTLS 
 
-This demo shows how to create zkTLS data attestations (proofs) about your 30-day PNL rate in Binance. I use the conditional compare in the proof generation, check [here] (https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test#verification-logics) for the syntax.
+This demo shows how to create zkTLS data attestations (proofs) about your 30-day PNL rate in Binance. I use the conditional compare in the proof generation, check [here](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test#verification-logics) for the syntax.
 
 
 # How to Run the Demo?
@@ -17,11 +17,11 @@ Remember to install the Primus [extension](https://chromewebstore.google.com/det
 
 # How to Create Your Own zkTLS DAPP?
 
-We use vite and React as the frameworks to create a dapp project. 
+We use Vite and React as the frameworks to create a dapp project. 
 ```node
 npm create vite@latest YOUR_PROJECT
 ```
-You can choose **JavaScript** and **React** as framework options in the question list. In your project folder, install the realted modules.
+You can choose **JavaScript** and **React** as framework options in the question list. In your project folder, install the related modules.
 
 ```node
 cd YOUR_PROJECT
@@ -47,7 +47,7 @@ import PrimusZKTLS from "@primuslabs/zktls-js-sdk"
 ```
 
 # Generate the Attestation
-for init the SDK and get the zkTLS attestation, you can refer to this [example](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test)
+To initialize the SDK and generate the zkTLS attestation, you can refer to this [example](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test)
 
 
 # Verify the Attestation On-Chain
