@@ -68,9 +68,8 @@ Once the parameters are set, you can verify the attestation in two ways:
 - Wrapped Call – Call a function in your own business contract that internally calls the Primus zkTLS verifier contract.
 You can follow this [ guide](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/solidity/quickstart#deploy-a-smart-contract) to see how to deploy and integrate such a contract.
 
-'''
-...
 
+```
         const abi = contractData.abi;
 
         const contractAddress = "0x1Ad7fD53206fDc3979C672C0466A1c48AF47B431"; // monad test
@@ -88,7 +87,7 @@ You can follow this [ guide](https://docs.primuslabs.xyz/data-verification/zk-tl
         } catch (error) {
             console.error("Error in verifyAttestation:", error);
         }
-'''
+```
 
 # More Templates
 You can get more templates from the dev hub [marketplace](https://dev.primuslabs.xyz/marketplace)
