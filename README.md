@@ -49,5 +49,46 @@ import PrimusZKTLS from "@primuslabs/zktls-js-sdk"
 # Generate the Attestation
 for init the SDK and get the zkTLS attestation, you can refer to this [example](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test)
 
+
+# Verify the Attestation On-Chain
+
+Before verifying your attestation on-chain, make sure to configure the following parameters:
+
+- Contract Address – Refer to [this page](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/solidity/overview) for the official Primus zkTLS verifier contract addresses deployed on different blockchains. In this example, we use the contract on the Monad testnet as the verifier.
+
+- Contract ABI – You can retrieve the ABI from the contractData.js file in the project folder.
+
+- RPC URL – Use the RPC URL of the target chain. In this example, we use the RPC provided by the Monad team.
+
+
+Once the parameters are set, you can verify the attestation in two ways:
+
+- Direct Call – Call the `verifyAttestation()` method in the zkTLS verifier contract.
+
+- Wrapped Call – Call a function in your own business contract that internally calls the Primus zkTLS verifier contract.
+You can follow this [ guide](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/solidity/quickstart#deploy-a-smart-contract) to see how to deploy and integrate such a contract.
+
+'''
+...
+
+        const abi = contractData.abi;
+
+        const contractAddress = "0x1Ad7fD53206fDc3979C672C0466A1c48AF47B431"; // monad test
+        // Use ethers.js connect to the smart contract
+        const provider = new ethers.providers.JsonRpcProvider("https://testnet-rpc.monad.xyz");
+    
+        console.log(provider);
+        const contract = new ethers.Contract(contractAddress, abi, provider);
+       
+
+        try {
+            // Call verifyAttestation func
+            const tx = await contract.verifyAttestation(attestation);
+            console.log("Transaction verified on monad testnet:", tx);
+        } catch (error) {
+            console.error("Error in verifyAttestation:", error);
+        }
+'''
+
 # More Templates
 You can get more templates from the dev hub [marketplace](https://dev.primuslabs.xyz/marketplace)
