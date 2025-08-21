@@ -1,6 +1,8 @@
 # A Quick Demo for Primus zkTLS 
 
-This demo shows how to create zkTLS data attestations (proofs) about your 30-day PNL rate in Binance. I use the conditional compare in the proof generation, check [here](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test#verification-logics) for the syntax.
+This demo shows how to integrate with Primus zkTLS SDK and build your own zkTLS dapp in an end-to-end process.
+
+The demo allows any user to create zkTLS data attestations (proofs) about their 30-day PNL rate in Binance exchange. It uses the conditional compare in the proof generation to protect the user's raw data, check [here](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test#verification-logics) for the syntax.
 
 
 # How to Run the Demo?
@@ -41,7 +43,7 @@ yarn add --save @primuslabs/zktls-js-sdk
 ```
 
 # Importing the SDK
-After installation, you can import the SDK in your JavaScript or TypeScript files. Here's how:
+After installation, you can import the SDK in your JavaScript or TypeScript files. Here's how to do that:
 ```node
 import PrimusZKTLS from "@primuslabs/zktls-js-sdk"
 ```
@@ -49,6 +51,10 @@ import PrimusZKTLS from "@primuslabs/zktls-js-sdk"
 # Generate the Attestation
 To initialize the SDK and generate the zkTLS attestation, you can refer to this [example](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test)
 
+Note you shall replace the following parameters in your own dapp
+* app ID and app Secret: you can register your dapp project in the [dev hub](https://dev.primuslabs.xyz) to get the pair.
+* template ID: you can pick either a published template or a local template to fulfil the requirement.
+* userAddress: this is the wallet of the end users, you should use a wallet provider to get the connected user's address in your own dapp. 
 
 # Verify the Attestation On-Chain
 
