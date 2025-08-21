@@ -1,9 +1,9 @@
 # A Quick Demo for Primus zkTLS 
 
-This demo shows how to integrate with Primus zkTLS SDK and build your own zkTLS dapp in an end-to-end process.
+This demo demonstrates how to seamlessly integrate the Primus zkTLS SDK and create a fully functional zkTLS-based dApp, showcasing the complete development workflow.
 
 The demo allows any user to create zkTLS data attestations (proofs) about their 30-day PNL rate in Binance exchange. It uses the conditional compare in the proof generation to protect the user's raw data, check [here](https://docs.primuslabs.xyz/data-verification/zk-tls-sdk/test#verification-logics) for the syntax.
-
+The code also verifies the zkTLS attestation on the Monad testnet with Primus deployed zkTLS verifier contracts.
 
 # How to Run the Demo?
 git clone the repo into your local folder, then:
